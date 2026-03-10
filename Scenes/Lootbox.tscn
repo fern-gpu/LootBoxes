@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4dvwctcbako8"]
+
+[ext_resource type="Texture2D" uid="uid://difptjxn6f3ag" path="res://LootBoxes/Art/icon.svg" id="1_txhh4"]
+[ext_resource type="Texture2D" uid="uid://ronu51ni1n0q" path="res://LootBoxes/Art/bird.png" id="2_q4ivj"]
+[ext_resource type="Script" uid="uid://qpi6qso06asq" path="res://LootBoxes/Code/Lootbox.gd" id="2_rncio"]
+
+[node name="Lootbox" type="TextureButton"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 129.0
+offset_bottom = 129.0
+texture_normal = ExtResource("1_txhh4")
+texture_pressed = ExtResource("2_q4ivj")
+script = ExtResource("2_rncio")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

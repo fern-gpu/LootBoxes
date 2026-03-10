@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7afukinb0jxy"]
+
+[ext_resource type="Script" uid="uid://duhq3jwklt5xd" path="res://LootBoxes/Code/bird.gd" id="1_crnqq"]
+[ext_resource type="Texture2D" uid="uid://ronu51ni1n0q" path="res://LootBoxes/Art/bird.png" id="2_j88tq"]
+
+[node name="Bird" type="Node2D"]
+script = ExtResource("1_crnqq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(9.146544, 9.845699)
+texture = ExtResource("2_j88tq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
