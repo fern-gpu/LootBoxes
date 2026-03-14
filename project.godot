@@ -20,7 +20,7 @@ config/icon="uid://difptjxn6f3ag"
 
 [autoload]
 
-Global="*res://LootBoxes/Code/Domain of bad written code/Global.gd"
+Global="*uid://dd0rfa037oiqv"
 
 [file_customization]
 
