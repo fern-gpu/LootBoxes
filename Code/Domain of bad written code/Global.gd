@@ -5,10 +5,10 @@ var multipler = 1
 
 # Spawns items. Please replace the items with the scene.
 @onready var items = {
-	"Common": [preload("res://LootBoxes/Scenes/items/bird.tscn")], 
-	"Rare": [preload("res://LootBoxes/Scenes/items/bird.tscn")],
-	"Epic": [preload("res://LootBoxes/Scenes/items/bird.tscn")],
-	"Legendary": [preload("res://LootBoxes/Scenes/items/bird.tscn"),preload("res://LootBoxes/R-items/omay's_car.tscn")]
+	"Common": [preload("res://Scenes/items/bird.tscn")], 
+	"Rare": [preload("res://Scenes/items/bird.tscn")],
+	"Epic": [preload("res://Scenes/items/bird.tscn")],
+	"Legendary": [preload("res://Scenes/items/bird.tscn"),preload("res://R-items/omay's_car.tscn")]
 }
 
 # type of rarity

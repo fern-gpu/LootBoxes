@@ -1,21 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bf4yt6onyj28o"]
+[gd_scene format=3 uid="uid://bf4yt6onyj28o"]
 
-[ext_resource type="PackedScene" uid="uid://b4dvwctcbako8" path="res://LootBoxes/Scenes/Lootbox.tscn" id="1_w3l4g"]
-[ext_resource type="Script" uid="uid://fh0j3q15gel6" path="res://LootBoxes/Scenes/label.gd" id="2_pdims"]
+[ext_resource type="PackedScene" uid="uid://b4dvwctcbako8" path="res://Scenes/Lootbox.tscn" id="1_w3l4g"]
+[ext_resource type="Script" uid="uid://fh0j3q15gel6" path="res://Scenes/label.gd" id="2_pdims"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" unique_id=2129515035]
 
-[node name="Lootbox" parent="." instance=ExtResource("1_w3l4g")]
+[node name="Lootbox" parent="." unique_id=1259843269 instance=ExtResource("1_w3l4g")]
 offset_left = -64.0
 offset_top = 57.0
 offset_right = 64.0
 offset_bottom = 185.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=770245488]
 position = Vector2(1, 27)
 zoom = Vector2(2, 2)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1448362672]
 offset_left = -33.0
 offset_top = -121.0
 offset_right = 36.0

@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Box"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://LootBoxes/Art/icon.svg"
+config/icon="uid://difptjxn6f3ag"
 
 [autoload]
 
@@ -31,3 +31,4 @@ folder_colors={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
