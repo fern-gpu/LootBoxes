@@ -8,7 +8,7 @@ var multipler = 1
 	"Common": [preload("res://LootBoxes/Scenes/items/bird.tscn")], 
 	"Rare": [preload("res://LootBoxes/Scenes/items/bird.tscn")],
 	"Epic": [preload("res://LootBoxes/Scenes/items/bird.tscn")],
-	"Legendary": [preload("res://LootBoxes/Scenes/items/bird.tscn")] 
+	"Legendary": [preload("res://LootBoxes/Scenes/items/bird.tscn"),preload("res://LootBoxes/R-items/omay's_car.tscn")]
 }
 
 # type of rarity

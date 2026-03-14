@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c7an30abx6ck4"]
+
+[ext_resource type="Script" uid="uid://bm7k5ywdrb6mn" path="res://LootBoxes/Code/omay's_car.gd" id="1_6fmhr"]
+[ext_resource type="Texture2D" uid="uid://c2v8le85xus74" path="res://LootBoxes/Art/CAR.png" id="2_tjd4o"]
+
+[node name="Omay\'s car" type="Node2D" unique_id=796061193]
+script = ExtResource("1_6fmhr")
+
+[node name="Car" type="Sprite2D" parent="." unique_id=1065054702]
+position = Vector2(3, -9)
+texture = ExtResource("2_tjd4o")
