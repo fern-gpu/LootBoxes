@@ -8,7 +8,5 @@ func _ready() -> void:
 		if i == 10:
 			Global.multipler += 1
 
-
-
 func _on_timer_timeout() -> void:
-		queue_free()
+	queue_free()
