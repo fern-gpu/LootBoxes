@@ -1,0 +1,48 @@
+name: Build and Deploy Godot Web Version
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Godot
+        run: |
+          cd src
+          wget --content-disposition https://downloads.godotengine.org/?version=4.6.1\&flavor=stable\&slug=export_templates.tpz\&platform=templates
+          mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.6.1.stable
+          unzip -j Godot_v4.6.1-stable_export_templates.tpz -d ~/Library/Application\ Support/Godot/export_templates/4.6.1.stable
+          wget --content-disposition https://downloads.godotengine.org/?version=4.6.1\&flavor=stable\&slug=macos.universal.zip\&platform=macos.universal
+          unzip Godot_v4.6.1-stable_macos.universal.zip
+          ./Godot.app/Contents/MacOS/Godot --headless --export-release Web
+          ./Godot.app/Contents/MacOS/Godot --headless --export-release Windows
+          ./Godot.app/Contents/MacOS/Godot --headless --export-release Linux
+          ./Godot.app/Contents/MacOS/Godot --headless --export-release macOS
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './export'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
