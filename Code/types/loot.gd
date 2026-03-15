@@ -1,0 +1,16 @@
+class_name Loot
+extends Resource
+
+## The name of the item
+@export var name: String
+## The description of the item
+@export var description: String
+## The "frequency" of the item. How many are there out of the "population" of all items.
+@export var frequency: int
+## The source scene of the item
+@export var icon: PackedScene
+## The script that is applied to the item in the world.
+@export var item_script: Script
+
+var sum_frequency: int
+var rating: String

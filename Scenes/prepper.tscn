@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://drgclw18ohtq1"]
+
+[ext_resource type="Script" uid="uid://c1pydrn7dffus" path="res://Code/Domain of bad written code/prepper.gd" id="1_45agw"]
+[ext_resource type="Script" uid="uid://celpchofyemsf" path="res://Code/types/loot.gd" id="2_2lh12"]
+[ext_resource type="PackedScene" uid="uid://c7an30abx6ck4" path="res://R-items/omay's_car.tscn" id="3_c7vft"]
+[ext_resource type="PackedScene" uid="uid://b7afukinb0jxy" path="res://Scenes/items/bird.tscn" id="4_etgt2"]
+[ext_resource type="Script" uid="uid://bm7k5ywdrb6mn" path="res://Code/items/omay's_car.gd" id="4_to240"]
+[ext_resource type="Script" uid="uid://duhq3jwklt5xd" path="res://Code/items/bird.gd" id="6_050n3"]
+
+[sub_resource type="Resource" id="Resource_72w5w"]
+script = ExtResource("2_2lh12")
+name = "Lester"
+frequency = 100
+icon = ExtResource("3_c7vft")
+item_script = ExtResource("4_to240")
+metadata/_custom_type_script = "uid://celpchofyemsf"
+
+[sub_resource type="Resource" id="Resource_to240"]
+script = ExtResource("2_2lh12")
+name = "Bird"
+frequency = 100
+icon = ExtResource("4_etgt2")
+item_script = ExtResource("6_050n3")
+metadata/_custom_type_script = "uid://celpchofyemsf"
+
+[sub_resource type="Resource" id="Resource_050n3"]
+script = ExtResource("2_2lh12")
+name = "Bird"
+frequency = 250
+icon = ExtResource("4_etgt2")
+item_script = ExtResource("6_050n3")
+metadata/_custom_type_script = "uid://celpchofyemsf"
+
+[sub_resource type="Resource" id="Resource_w111k"]
+script = ExtResource("2_2lh12")
+name = "Bird"
+frequency = 500
+icon = ExtResource("4_etgt2")
+item_script = ExtResource("6_050n3")
+metadata/_custom_type_script = "uid://celpchofyemsf"
+
+[sub_resource type="Resource" id="Resource_keu5h"]
+script = ExtResource("2_2lh12")
+name = "Bird"
+frequency = 1000
+icon = ExtResource("4_etgt2")
+item_script = ExtResource("6_050n3")
+metadata/_custom_type_script = "uid://celpchofyemsf"
+
+[node name="Prepper" type="Control" unique_id=1403288753]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_45agw")
+items = Array[ExtResource("2_2lh12")]([SubResource("Resource_72w5w"), SubResource("Resource_to240"), SubResource("Resource_050n3"), SubResource("Resource_w111k"), SubResource("Resource_keu5h")])
+
+[node name="Label" type="Label" parent="." unique_id=356718057]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 282.0
+offset_right = 596.0
+offset_bottom = 305.0
+text = "loading"
