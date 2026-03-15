@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7an30abx6ck4"]
 
-[ext_resource type="Script" uid="uid://bm7k5ywdrb6mn" path="res://Code/omay's_car.gd" id="1_6fmhr"]
+[ext_resource type="Script" uid="uid://bm7k5ywdrb6mn" path="res://Code/items/omay's_car.gd" id="1_6fmhr"]
 [ext_resource type="Texture2D" uid="uid://c2v8le85xus74" path="res://Art/CAR.png" id="2_tjd4o"]
 
 [node name="Omay\'s car" type="Node2D" unique_id=796061193]

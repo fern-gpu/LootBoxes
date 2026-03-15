@@ -1,9 +1,11 @@
 extends Node2D
-var number_of_rares: int
+var number_of_rares := 0
 
 func _ready() -> void:
 	if Global and Global.items:
-		number_of_rares = len(Global.items.get("Rare"))
+		for item in Global.items:
+			if item.rating == "Rare":
+				number_of_rares += 1
 		print(number_of_rares)
 		for i in range(number_of_rares):
 			Global.score += 100 * Global.multipler
