@@ -8,10 +8,6 @@
 
 config_version=5
 
-[animation]
-
-compatibility/default_parent_skeleton_in_mesh_instance_3d=true
-
 [application]
 
 config/name="Box"
@@ -22,16 +18,6 @@ config/icon="uid://difptjxn6f3ag"
 [autoload]
 
 Global="*uid://dd0rfa037oiqv"
-
-[display]
-
-window/stretch/mode="canvas_items"
-
-[file_customization]
-
-folder_colors={
-"res://LootBoxes/Code/Domain of bad written code/": "red"
-}
 
 [rendering]
 

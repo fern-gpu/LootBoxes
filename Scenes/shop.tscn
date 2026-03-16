@@ -1,39 +1,57 @@
 [gd_scene format=3 uid="uid://dlekukjej6to2"]
 
 [ext_resource type="Script" uid="uid://cxa381s7gth3v" path="res://Code/shop.gd" id="1_a0mxf"]
+[ext_resource type="StyleBox" uid="uid://bkm55wdx43oti" path="res://Styles/inactive_shop.tres" id="2_3ps1r"]
 [ext_resource type="Texture2D" uid="uid://c2v8le85xus74" path="res://Art/CAR.png" id="2_fdj0q"]
 [ext_resource type="Texture2D" uid="uid://ronu51ni1n0q" path="res://Art/bird.png" id="3_k6jq0"]
 [ext_resource type="Texture2D" uid="uid://difptjxn6f3ag" path="res://Art/icon.svg" id="4_3ps1r"]
+[ext_resource type="StyleBox" uid="uid://dlbe0hyji33nh" path="res://Styles/active_shop.tres" id="4_ymrm4"]
 
 [node name="Shop" type="HBoxContainer" unique_id=1641731614]
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -528.0
-offset_right = 528.0
+offset_left = -576.0
+offset_right = 576.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 24
+theme_override_constants/separation = 0
 script = ExtResource("1_a0mxf")
 
-[node name="Item1" type="VBoxContainer" parent="." unique_id=61762619]
+[node name="Item1" type="Panel" parent="." unique_id=1306462524]
+custom_minimum_size = Vector2(384, 648)
 layout_mode = 2
-size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("2_3ps1r")
 
-[node name="TextureRect" type="TextureRect" parent="Item1" unique_id=110969250]
+[node name="MarginContainer" type="MarginContainer" parent="Item1" unique_id=899405815]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Item1/MarginContainer" unique_id=1389320574]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Item1/MarginContainer/VBoxContainer" unique_id=1645506488]
 layout_mode = 2
 texture = ExtResource("2_fdj0q")
 expand_mode = 4
 
-[node name="Description" type="Label" parent="Item1" unique_id=469035965]
+[node name="Description" type="Label" parent="Item1/MarginContainer/VBoxContainer" unique_id=1250671965]
 custom_minimum_size = Vector2(336, 86)
 layout_mode = 2
 text = "This is an in-depth description for the first item. It should carry over to other lines."
 autowrap_mode = 3
 
-[node name="Name" type="Label" parent="Item1" unique_id=719622491]
+[node name="Name" type="Label" parent="Item1/MarginContainer/VBoxContainer" unique_id=1387767236]
 custom_minimum_size = Vector2(336, 86)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
@@ -41,22 +59,38 @@ text = "The First Item"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Item2" type="VBoxContainer" parent="." unique_id=482783759]
+[node name="Item2" type="Panel" parent="." unique_id=136181234]
+custom_minimum_size = Vector2(384, 648)
 layout_mode = 2
-size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("4_ymrm4")
 
-[node name="TextureRect" type="TextureRect" parent="Item2" unique_id=1742273623]
+[node name="MarginContainer" type="MarginContainer" parent="Item2" unique_id=1813534928]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Item2/MarginContainer" unique_id=1490753458]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Item2/MarginContainer/VBoxContainer" unique_id=1181106852]
 layout_mode = 2
 texture = ExtResource("3_k6jq0")
 expand_mode = 4
 
-[node name="Description" type="Label" parent="Item2" unique_id=2023793682]
+[node name="Description" type="Label" parent="Item2/MarginContainer/VBoxContainer" unique_id=222958243]
 custom_minimum_size = Vector2(336, 86)
 layout_mode = 2
 text = "This is an in-depth description for the second item. It should carry over to other lines."
 autowrap_mode = 3
 
-[node name="Name" type="Label" parent="Item2" unique_id=1970489788]
+[node name="Name" type="Label" parent="Item2/MarginContainer/VBoxContainer" unique_id=1383401739]
 custom_minimum_size = Vector2(336, 86)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
@@ -64,22 +98,38 @@ text = "The Second Item"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Item3" type="VBoxContainer" parent="." unique_id=1167628725]
+[node name="Item3" type="Panel" parent="." unique_id=885391804]
+custom_minimum_size = Vector2(384, 648)
 layout_mode = 2
-size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("2_3ps1r")
 
-[node name="TextureRect" type="TextureRect" parent="Item3" unique_id=698834709]
+[node name="MarginContainer" type="MarginContainer" parent="Item3" unique_id=720432701]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Item3/MarginContainer" unique_id=25473199]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Item3/MarginContainer/VBoxContainer" unique_id=1040809791]
 layout_mode = 2
 texture = ExtResource("4_3ps1r")
 expand_mode = 4
 
-[node name="Description" type="Label" parent="Item3" unique_id=918315622]
+[node name="Description" type="Label" parent="Item3/MarginContainer/VBoxContainer" unique_id=1398904961]
 custom_minimum_size = Vector2(336, 86)
 layout_mode = 2
 text = "This is an in-depth description for the third item. It should carry over to other lines."
 autowrap_mode = 3
 
-[node name="Name" type="Label" parent="Item3" unique_id=623505257]
+[node name="Name" type="Label" parent="Item3/MarginContainer/VBoxContainer" unique_id=1563952155]
 custom_minimum_size = Vector2(336, 86)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24

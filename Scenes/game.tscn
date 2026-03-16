@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b4dvwctcbako8" path="res://Scenes/Lootbox.tscn" id="1_w3l4g"]
 [ext_resource type="Script" uid="uid://fh0j3q15gel6" path="res://Scenes/label.gd" id="2_pdims"]
+[ext_resource type="PackedScene" uid="uid://dlekukjej6to2" path="res://Scenes/shop.tscn" id="3_wrm1d"]
 
 [node name="Game" type="Node2D" unique_id=2129515035]
 
@@ -13,7 +14,6 @@ offset_bottom = 185.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=770245488]
 position = Vector2(1, 27)
-zoom = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="." unique_id=1448362672]
 offset_left = -33.0
@@ -22,3 +22,9 @@ offset_right = 36.0
 offset_bottom = -98.0
 text = "Test Test"
 script = ExtResource("2_pdims")
+
+[node name="Shop" parent="." unique_id=1641731614 instance=ExtResource("3_wrm1d")]
+offset_left = -565.0
+offset_top = 65.0
+offset_right = 587.0
+offset_bottom = 65.0

@@ -7,8 +7,8 @@ extends Resource
 @export var description: String
 ## The "frequency" of the item. How many are there out of the "population" of all items.
 @export var frequency: int
-## The source scene of the item
-@export var icon: PackedScene
+## The source image of the item
+@export var icon: Texture2D
 ## The script that is applied to the item in the world.
 @export var item_script: Script
 
