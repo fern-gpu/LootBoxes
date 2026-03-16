@@ -9,12 +9,13 @@ var shop_items: Array[Loot]
 func calculate_items():
 	for items in [lootbox_items, shop_items]:
 		var total_pop := 0
-		
+
 		# calculate total frequency for rating & collect frequency for choice (idk if this is the term but i know it works)
+
 		for item in items:
 			total_pop += item.frequency
 			item.sum_frequency = total_pop
-		
+
 		# make this a float so that we can use float division instead of integer
 		var avg_pop = float(total_pop) / len(items)
 		# rate the items into their category
@@ -39,4 +40,4 @@ func loot_open(num_items: int) -> Array[Loot]:
 				break
 	return items
 
-# This took way to long (/-\)
+# (0-0) it's ... SIMPLE!!!

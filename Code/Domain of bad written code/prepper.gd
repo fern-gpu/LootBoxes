@@ -6,7 +6,7 @@ extends Node
 func _ready() -> void:
 	Global.lootbox_items = lootbox_items
 	Global.shop_items = shop_items
-	
+
 	Global.calculate_items()
-	
+
 	get_tree().change_scene_to_file("res://Scenes/game.tscn")
