@@ -1,4 +1,4 @@
 extends TextureButton
 
 func _on_pressed() -> void:
-	Global.loot_open(1)
+	get_tree().change_scene_to_file("res://Scenes/loot!.tscn")

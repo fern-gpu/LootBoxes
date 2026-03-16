@@ -22,7 +22,6 @@ func _ready() -> void:
 			item.rating = "Rare"
 		else:
 			item.rating = "Legendary"
-	
+		Global.rate = item.rating # Im sorting the items rating for future use i don't really know what the prepper will be used for though.
 	Global.items = items
-	
 	get_tree().change_scene_to_file("res://Scenes/game.tscn")
