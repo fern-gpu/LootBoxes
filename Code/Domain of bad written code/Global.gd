@@ -2,10 +2,11 @@ extends Node
 
 var score = 0
 var multipler = 1
-
+var item_rate = ""
 var lootbox_items: Array[Loot]
 var shop_items: Array[Loot]
-
+var quota = 0
+var num_rounds = 0
 func calculate_items():
 	for items in [lootbox_items, shop_items]:
 		var total_pop := 0
@@ -29,15 +30,26 @@ func calculate_items():
 				item.rating = "Rare"
 			else:
 				item.rating = "Legendary"
+			item_rate= item.rating
+
 
 func loot_open(num_items: int) -> Array[Loot]:
 	var items: Array[Loot] = []
-	for _i in range(num_items):
-		var choice = randi() % lootbox_items[-1].sum_frequency
+	if lootbox_items.is_empty():
+		return items
+
+	var max_freq = lootbox_items.back().sum_frequency
+
+	for _i in num_items:
+		var choice = randi() % max_freq
 		for item in lootbox_items:
 			if choice <= item.sum_frequency:
 				items.append(item)
 				break
+
 	return items
 
+func _quota_cal():
+	for i in range(num_rounds):
+		quota = i* 100 * multipler
 # (0-0) it's ... SIMPLE!!!

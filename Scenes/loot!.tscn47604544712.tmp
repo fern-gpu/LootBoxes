@@ -46,10 +46,3 @@ offset_left = 240.0
 offset_top = 168.0
 offset_right = 368.0
 offset_bottom = 296.0
-
-[node name="Score" type="RichTextLabel" parent="." unique_id=899220937]
-offset_left = 432.0
-offset_right = 560.0
-offset_bottom = 40.0
-bbcode_enabled = true
-text = "[rainbow]score[/rainbow]"

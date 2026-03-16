@@ -2,7 +2,7 @@
 extends RichTextEffect
 class_name RateItem
 
-var rating = "Legendary"
+var rating = Global.item_rate
 var bbcode = "rate"
 
 func _process_custom_fx(char_fx: CharFXTransform) -> bool:
@@ -24,6 +24,6 @@ func _process_custom_fx(char_fx: CharFXTransform) -> bool:
 		char_fx.offset.y = 20 * sin(char_fx.elapsed_time * 40 + char_fx.relative_index)
 
 	else:
-		char_fx.offset.y = 20 * sin(char_fx.elapsed_time * 40 + char_fx.relative_index)
+		char_fx.offset.y = 0.25 * sin(char_fx.elapsed_time * 5 + char_fx.relative_index)
 
 	return true
