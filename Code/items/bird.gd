@@ -2,6 +2,7 @@ extends Node2D
 #Pls replace the art and name
 
 func _ready() -> void:
+	scale = Vector2(16, 16)
 	# I feel like this is easy to understand so I wont explain it.
 	for i in randi_range(1,10):
 		Global.score += 100 * Global.multipler
