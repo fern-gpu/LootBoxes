@@ -9,4 +9,4 @@ func _ready() -> void:
 
 	Global.calculate_items()
 
-	get_tree().change_scene_to_file("res://Scenes/game.tscn")
+	get_tree().change_scene_to_file("res://Scenes/map.tscn")
