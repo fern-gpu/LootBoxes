@@ -37,4 +37,4 @@ func _process(_delta: float) -> void:
 		sprite.texture = loots[selected].icon
 		sprite.set_script(loots[selected].item_script)
 		get_tree().current_scene.add_child(sprite)
-		queue_free()
+		get_tree().change_scene_to_file("res://Scenes/map.tscn")

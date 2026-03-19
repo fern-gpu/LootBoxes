@@ -11,6 +11,7 @@
 [sub_resource type="Resource" id="Resource_c7vft"]
 script = ExtResource("2_2lh12")
 name = "Bird"
+description = "A bird, I suppose."
 frequency = 1000
 icon = ExtResource("3_050n3")
 item_script = ExtResource("6_050n3")
@@ -19,6 +20,7 @@ metadata/_custom_type_script = "uid://celpchofyemsf"
 [sub_resource type="Resource" id="Resource_etgt2"]
 script = ExtResource("2_2lh12")
 name = "Bird"
+description = "A bird, I suppose."
 frequency = 500
 icon = ExtResource("3_050n3")
 item_script = ExtResource("6_050n3")
@@ -27,6 +29,7 @@ metadata/_custom_type_script = "uid://celpchofyemsf"
 [sub_resource type="Resource" id="Resource_to240"]
 script = ExtResource("2_2lh12")
 name = "Bird"
+description = "A bird, I suppose."
 frequency = 250
 icon = ExtResource("3_050n3")
 item_script = ExtResource("6_050n3")
@@ -35,6 +38,7 @@ metadata/_custom_type_script = "uid://celpchofyemsf"
 [sub_resource type="Resource" id="Resource_050n3"]
 script = ExtResource("2_2lh12")
 name = "Bird"
+description = "A bird, I suppose."
 frequency = 100
 icon = ExtResource("3_050n3")
 item_script = ExtResource("6_050n3")
@@ -43,6 +47,7 @@ metadata/_custom_type_script = "uid://celpchofyemsf"
 [sub_resource type="Resource" id="Resource_w111k"]
 script = ExtResource("2_2lh12")
 name = "Lester Delano Kitty"
+description = "The truest lord of the realm"
 frequency = 100
 icon = ExtResource("6_w111k")
 item_script = ExtResource("4_to240")
