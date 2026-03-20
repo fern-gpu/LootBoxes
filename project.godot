@@ -19,11 +19,6 @@ config/icon="uid://difptjxn6f3ag"
 
 Global="*uid://dd0rfa037oiqv"
 
-[display]
-
-window/size/viewport_width=960
-window/size/viewport_height=960
-
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

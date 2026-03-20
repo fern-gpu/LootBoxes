@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nko4kah88xvy"]
 
-[ext_resource type="Script" uid="uid://3hp0baurd5n5" path="res://map.gd" id="1_ci6au"]
+[ext_resource type="Script" uid="uid://3hp0baurd5n5" path="res://Code/map.gd" id="1_ci6au"]
 
 [node name="Map" type="Control" unique_id=2063085968]
 layout_mode = 3
@@ -24,3 +24,6 @@ offset_left = 101.0
 offset_top = 382.0
 offset_right = 308.0
 offset_bottom = 469.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=129381141]
+position = Vector2(448, 416)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cqwthfcefpja7" path="res://Code/Effects/textshader.gd" id="2_rvo63"]
 [ext_resource type="PackedScene" uid="uid://b4dvwctcbako8" path="res://Scenes/Lootbox.tscn" id="3_byn4j"]
+[ext_resource type="Script" uid="uid://c6nsgtjol8q44" path="res://Scenes/timer.gd" id="3_h0xx2"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_byn4j"]
 
@@ -37,10 +38,6 @@ offset_bottom = 412.0
 bbcode_enabled = true
 text = "[center]Im just a description..."
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1032473042]
-position = Vector2(307, 197)
-zoom = Vector2(2, 2)
-
 [node name="Lootbox" parent="." unique_id=654912222 instance=ExtResource("3_byn4j")]
 offset_left = 240.0
 offset_top = 168.0
@@ -53,3 +50,14 @@ offset_right = 560.0
 offset_bottom = 40.0
 bbcode_enabled = true
 text = "[rainbow]score[/rainbow]"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1032473042]
+position = Vector2(312, 136)
+zoom = Vector2(1.5, 1.5)
+
+[node name="Timer" type="Timer" parent="." unique_id=2060932673]
+wait_time = 3.0
+script = ExtResource("3_h0xx2")
+
+[connection signal="pressed" from="Lootbox" to="Timer" method="_on_lootbox_pressed"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

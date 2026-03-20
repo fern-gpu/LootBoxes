@@ -8,7 +8,7 @@ var bbcode = "rate"
 func _process_custom_fx(char_fx: CharFXTransform) -> bool:
 
 	if rating == "Common":
-		char_fx.color = Color(0.2,0.2,0)
+		char_fx.color = Color(0.33,0.,0)
 		char_fx.offset.y = 0.5 * sin(char_fx.elapsed_time * 10 + char_fx.relative_index)
 
 	elif rating == "Rare":

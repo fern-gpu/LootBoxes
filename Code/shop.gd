@@ -1,10 +1,10 @@
 extends Control
-
+# Uh I made the cost thing so you knowwwww. (sorry)
 var selected = 1
 
 @onready var item_boxes: Array[Panel] = [$Item1, $Item2, $Item3]
-@onready var inactive_stylebox := preload("res://Styles/inactive_shop.tres")
-@onready var active_stylebox := preload("res://Styles/active_shop.tres")
+@onready var inactive_stylebox := preload("res://Code/Effects/Styles/inactive_shop.tres")
+@onready var active_stylebox := preload("res://Code/Effects/Styles/active_shop.tres")
 var loots = []
 
 func _ready() -> void:

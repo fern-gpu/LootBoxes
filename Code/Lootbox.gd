@@ -1,7 +1,10 @@
 extends TextureButton
-
+# The lootbox mainly need to be reworked to fit with the Arrays  as its only spawning the bird for some reason. 
+var opened = false
 func _on_pressed() -> void:
+	opened = true
 	var loot = Global.loot_open(1)
+	$"scene_change timer".start()
 	
 	for item in loot:
 		var sprite = Sprite2D.new()
@@ -14,8 +17,14 @@ func _on_pressed() -> void:
 		$"../Title".text = "[center][rate]" + item.name + "[/rate]"
 
 func _process(delta: float) -> void:
+	if opened:
+		$".".disabled = true
 	$"../Score".text = "[rainbow]" + str(Global.score) + "[/rainbow]/" + str(Global.quota)
 	if Global.score >= Global.quota:
-		print("win")
-		get_tree().change_scene_to_file("res://Scenes/map.tscn")
-	else: print("lose")
+		Global.coins = Global.score / 10
+		print(Global.coins) 
+	else: 
+		Global.coins -= 10
+
+func _on_timer_timeout() -> void:
+	Global.score = 0

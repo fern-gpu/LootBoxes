@@ -7,7 +7,7 @@ var lootbox_items: Array[Loot]
 var shop_items: Array[Loot]
 var quota = 0
 var num_rounds = 0
-
+var coins = 0
 func calculate_items():
 	for items in [lootbox_items, shop_items]:
 		var total_pop := 0
@@ -35,6 +35,7 @@ func calculate_items():
 
 
 func loot_open(num_items: int) -> Array[Loot]:
+	# It just needs to display the items though I don't know how to like do that so yeah...
 	var items: Array[Loot] = []
 	if lootbox_items.is_empty():
 		return items

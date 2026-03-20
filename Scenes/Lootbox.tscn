@@ -13,4 +13,9 @@ texture_normal = ExtResource("1_txhh4")
 texture_pressed = ExtResource("2_q4ivj")
 script = ExtResource("2_rncio")
 
+[node name="Timer" type="Timer" parent="." unique_id=1793261437]
+wait_time = 1.5
+autostart = true
+
 [connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
